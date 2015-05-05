@@ -1,0 +1,28 @@
+{
+  "name": "Nodejs-Mongodb-Service",
+  "version": "0.0.1",
+  "description": "A sample webservice nodejs-mongodb app for Bluemix",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "express": "~4.2.0",
+    "MD5": "1.2.1",
+    "moment": "1.7.2",
+    "mongodb": "1.4.7",
+    "mysql": "2.5.2",
+    "node-uuid": "1.4.1"
+  },
+  "engines": {
+    "node": "0.10.*"
+  },
+  "repository": {},
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "mysql"
+  ]
+}
