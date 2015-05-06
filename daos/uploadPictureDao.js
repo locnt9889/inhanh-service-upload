@@ -14,10 +14,8 @@ var TableNameAccount = constant.table_name.account;
 
 /*
  * @ name : upload/uploadAvatar
- * @ description : remove contact
+ * @ description : upload Avatar
  * @ authen : locnt
- * @ param : access_token : access_token
- * @ param : array_contact_id : array contact id
  */
 exports.uploadAvatar = function(res, accessTokenObj, avatarData){
     var connection = mysql.createConnection(constant.mysqlInfo);
