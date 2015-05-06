@@ -57,7 +57,7 @@ exports.sql_script_home = {
 }
 
 exports.sql_script_upload = {
-    sql_update_avatar : "UPDATE account SET avatar_url = ? WHERE id = ?"
+    sql_update_avatar : "UPDATE account SET has_avatar = ? WHERE id = ?"
 }
 
 exports.table_name = {
@@ -67,6 +67,12 @@ exports.table_name = {
     user_contact : "user_contact"
 };
 
+exports.file_avatar_default = "./public/images/avatar_default.png";
+
 exports.folder_upload_file_avatar = "inhanh-upload-folder/avatar-image/";
 
-exports.path_upload_file = "C:/xampp/htdocs/";
+exports.path_upload_file = "../";
+
+exports.file_avatar_name_pre = "userAvatar_";
+
+exports.file_avatar_ext = ".png";

@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 //require router
 var uploadPicture = require('./routers/uploadPictureRouter');
+var picture = require('./routers/pictureRouter');
 
 var app = express();
 app.use(bodyParser.json());
@@ -18,6 +19,7 @@ app.get('/', function (req, res) {
 	res.send("A sample webservice nodejs-mongodb app for Bluemix");
 });
 app.use('/uploadPicture', uploadPicture);
+app.use('/picture', picture);
 
 // Start server
 app.set('port', (process.env.PORT || 5001));
