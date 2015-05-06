@@ -67,4 +67,6 @@ exports.table_name = {
     user_contact : "user_contact"
 };
 
-exports.path_upload_file = "C:/xampp/htdocs/inhanh-upload-folder/avatar-image/";
+exports.folder_upload_file_avatar = "inhanh-upload-folder/avatar-image/";
+
+exports.path_upload_file = "C:/xampp/htdocs/";

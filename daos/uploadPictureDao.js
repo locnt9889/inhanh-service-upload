@@ -34,7 +34,8 @@ exports.uploadAvatar = function(res, accessTokenObj, avatarData){
     }else{
         var base64Data = avatarData.replace(/^data:image\/png;base64,/, "");
         var fileName = "userAvatar_" + accessTokenObj.user_id + ".png";
-        require("fs").writeFile(constant.path_upload_file + fileName, base64Data, 'base64', function(err) {
+        var fullPathFile = constant.path_upload_file + constant.folder_upload_file_avatar + fileName;
+        require("fs").writeFile(fullPathFile, base64Data, 'base64', function(err) {
             if(err){
                 responseModel.errorsObject = err;
                 responseModel.errorsMessage = message.error_avatar_upload_failure;
@@ -43,7 +44,7 @@ exports.uploadAvatar = function(res, accessTokenObj, avatarData){
                 res.send(responseModel);
             }else{
                 var sql_update_avatar = constant.sql_script_upload.sql_update_avatar;
-                var sql_param_update_avatar = ["inhanh-upload-folder/avatar-image/" + fileName, accessTokenObj.user_id];
+                var sql_param_update_avatar = [constant.folder_upload_file_avatar + fileName, accessTokenObj.user_id];
 
                 var actionName = message.functionName.updateAvatar;
 
