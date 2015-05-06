@@ -30,7 +30,7 @@ exports.uploadAvatar = function(res, accessTokenObj, avatarData){
         responseModel.statusErrorCode = constant.error_code.error_avatar_data_empty;
         res.send(responseModel);
     }else{
-        var base64Data = avatarData.replace(/^data:image\/png;base64,/, "");
+        var base64Data = avatarData.substring(avatarData.indexOf(',')+1, avatarData.length);
         var fileName = constant.file_avatar_name_pre + accessTokenObj.user_id + constant.file_avatar_ext;
         var fullPathFile = constant.path_upload_file + constant.folder_upload_file_avatar + fileName;
         require("fs").writeFile(fullPathFile, base64Data, 'base64', function(err) {
