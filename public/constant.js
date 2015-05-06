@@ -15,7 +15,7 @@
 
 //exports.mysqlURL = "mysql://devinhanh:inhanh2014@localhost:3306/inhanh?reconnect=true&charset=UTF8_GENERAL_CI&timezone=+0700'";
 exports.mysqlInfo = {
-    host: '104.236.31.239',
+    host: 'localhost',
     user: 'devinhanh',
     password: 'inhanh2014',
     database: 'inhanh'
@@ -53,7 +53,7 @@ exports.error_code = {
 exports.sql_script_home = {
     sql_remove_all_token_access_by_user_and_device : "UPDATE access_token SET isactive = 0 WHERE user_id = ? AND device_token = ?",
     sql_remove_access_token_logout : "UPDATE access_token SET islogin = 0,logout_time = ? WHERE access_token = ?",
-    sql_check_access_token : "SELECT * FROM access_token WHERE access_token = ? AND islogin = 1 AND isactive = 1",
+    sql_check_access_token : "SELECT * FROM access_token WHERE access_token = ? AND islogin = 1 AND isactive = 1"
 }
 
 exports.sql_script_upload = {
